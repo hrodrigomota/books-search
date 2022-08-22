@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.4rem;
+}
+
+header {
+    background-color: #F0F0F0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5rem;
+}
+
+h1 {
+    margin-bottom: 3rem;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+}
+
+fieldset {
+    width: 75rem;
+    height: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+    border: 1px solid gray;
+}
+
+#search {
+    width: 65rem;
+    height: 4rem;
+    /* text-transform: uppercase; */
+}
+
+.type {
+    padding-top: 2rem;
+    display: flex;
+    gap: 8rem;
+}
+
+.typeFit {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+
+.bookList {
+    width: 65rem;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2rem;
+}
+
+.bookList a {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.button {
+    margin: 4rem 0 4rem 0;
+    width: 30rem;
+    height: 4rem;
+    cursor: pointer;
+}
+
+img {
+    width: 11.5rem;
+    height: 17rem;
+}
+
+#return {
+    width: 65rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+#return h2 {
+    text-align: justify;
+    padding: 0 1rem 0 0;
+    margin-bottom: 2rem;
+}
+
+.returnContent {
+    display: flex;
+    justify-content: space-between;
+    line-height: 3rem;
+    margin-bottom: 4rem;
+    padding: 1rem;
+    box-shadow: 0px 0px 20px;
+}
+
+.returnNotFound {
+    display: flex;
+    justify-content: center;
+}
+
+img#notFoundAuthor,
+img#notFoundTitle, 
+img#notFoundYear {
+    margin: -4rem 0 0 4rem;
+    width: 47.4rem;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .container {
+        font-size: 1rem;
+    }
+
+    fieldset {
+        width: 30rem;
+        height: 13.2rem;
+        padding: 0.5rem;
+    }
+
+    #search {
+        width: 25rem;
+        height: 3rem;
+        font-size: 0.9rem;
+    }
+    
+    .type {
+        width: 25rem;
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: flex-start;
+    }
+    
+    .bookList {
+        width: 25rem;
+        padding-top: 1rem;
+    }
+    
+    .bookList a {
+        font-size: 1rem;
+    }
+
+    .button {
+        margin: 3rem 0 4rem 0;
+        width: 15rem;
+        height: 3rem;
+        cursor: pointer;
+    }
+
+    img {
+        width: 10.5rem;
+        height: 16rem;
+    }
+
+    #return {
+        width: 25rem;
+    }
+
+    #return h2 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .returnContent {
+        line-height: 1.5rem;
+    }
+
+    img#notFoundAuthor,
+    img#notFoundTitle, 
+    img#notFoundYear {
+        margin: -4rem 0 0 4rem;
+        width: 43rem;
+        height: auto;
+}
+}

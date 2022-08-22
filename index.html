@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Search</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="mainTitle">~ Books Search ~</h1>
+            <fieldset>
+                <input type="text" name="search" id="search" placeholder="Digite o nome do autor, o nome do título ou o ano do livro...">
+                <legend>&nbspSelecione o tipo de busca:&nbsp</legend>
+                <div class="type">
+                    <div class="typeFit">
+                        <input type="radio" name="radSearch" id="author" value="author" checked>
+                        <label for="author">Por nome do autor</label>
+                    </div>
+                    <div class="typeFit">
+                        <input type="radio" name="radSearch" id="book" value="book">
+                        <label for="book">Por nome do título</label>
+                    </div>
+                    <div class="typeFit">
+                        <input type="radio" name="radSearch" id="year" value="year">
+                        <label for="book">Por ano do título</label>
+                    </div>
+                </div>
+                <div class="bookList">
+                    <a href="#" id="arrayButton">+ ver todos</a>
+                </div>
+            </fieldset>
+        </header>
+        <button class="button">Buscar</button>
+        <div id="return"></div>
+    </div>
+</body>
+<script src="./script.js" type="module"></script>
+</html>
