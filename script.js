@@ -29,12 +29,13 @@ arrayButton.onclick = function() {
 
 let button = document.querySelector('.button')
 button.onclick = function search() {
-    let inputSearch = document.querySelector('#search').value
+    let inputSearch = document.querySelector('#search').value.toLowerCase()
     let radSearch = document.getElementsByName('radSearch')
     let returnSearch = document.querySelector('#return')
     
     if(inputSearch == "") {
         alert(`Favor preencha o campo com uma das informações solicitadas.`)
+        return
     }
 
     returnSearch.innerHTML = ""
@@ -44,7 +45,7 @@ button.onclick = function search() {
         })
 
         books.forEach( element => {
-            if(element.author.toLowerCase() == inputSearch) {
+            if(element.author.toLowerCase().includes(inputSearch)) {
                 let book = document.createElement('div')
                 book.classList.add('returnContent')
                 book.innerHTML = `
@@ -57,7 +58,7 @@ button.onclick = function search() {
                 returnSearch.appendChild(book);
             }
             
-            if (books.every(element => element.author.toLowerCase() != inputSearch && inputSearch != "")) {
+            if (books.every(element => element.author.toLowerCase().includes(inputSearch) == false)) {
                 returnSearch.innerHTML = `
                 <div class='returnNotFound'>
                 <img id="notFoundAuthor" src="./images/not_found_author.gif" alt="Resultado de busca por autor não encontrado">
@@ -71,7 +72,7 @@ button.onclick = function search() {
             return a.title < b.title ? -1 : a.title > b.title ? 1 : 0;
         })
         books.forEach( element => {
-            if(element.title.toLowerCase() == inputSearch) {
+            if(element.title.toLowerCase().includes(inputSearch)) {
                 let author = document.createElement('div')
                 author.classList.add('returnContent')
                 author.innerHTML = `
@@ -84,7 +85,7 @@ button.onclick = function search() {
                 returnSearch.appendChild(author);
             } 
 
-            if (books.every(element => element.title.toLowerCase() != inputSearch && inputSearch != "")) {
+            if (books.every(element => element.title.toLowerCase().includes(inputSearch) == false)) {
                 returnSearch.innerHTML = `
                 <div class='returnNotFound'>
                 <img id="notFoundTitle" src="./images/not_found_title.gif" alt="Resultado de busca por título não encontrado">
@@ -111,7 +112,7 @@ button.onclick = function search() {
                 returnSearch.appendChild(books)
             } 
 
-            if (books.every(element => element.year != inputSearch && inputSearch != "")) {
+            if (books.every(element => element.year != inputSearch)) {
                 returnSearch.innerHTML = `
                 <div class='returnNotFound'>
                 <img id="notFoundYear" src="./images/not_found_year.gif" alt="Resultado de busca por ano não encontrado">
