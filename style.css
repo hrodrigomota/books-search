@@ -149,7 +149,7 @@ img#notFoundYear {
     
     .bookList {
         width: 25rem;
-        padding-top: 1rem;
+        padding-top: 0.5rem;
     }
     
     .bookList a {
@@ -187,5 +187,5 @@ img#notFoundYear {
         margin: -4rem 0 0 4rem;
         width: 43rem;
         height: auto;
-}
+    }
 }
