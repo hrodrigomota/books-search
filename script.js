@@ -121,3 +121,9 @@ button.onclick = function search() {
         })
     }
 }
+
+addEventListener('keypress', function(keyEnter) {
+    if (keyEnter.key === 'Enter') {
+        button.onclick()
+    }
+})
